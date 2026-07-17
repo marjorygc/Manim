@@ -1,0 +1,16 @@
+# Ambiente virtual
+.venv/
+
+# Arquivos temporários do Python
+__pycache__/
+*.py[cod]
+
+# Arquivos gerados pelo Manim
+media/
+**/media/
+
+# Vídeos
+*.mp4
+
+# Cache do Manim (opcional)
+*.log
