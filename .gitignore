@@ -9,8 +9,5 @@ __pycache__/
 media/
 **/media/
 
-# Vídeos
-*.mp4
-
 # Cache do Manim (opcional)
 *.log
