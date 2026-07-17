@@ -1,8 +1,7 @@
 # 📐 Trabalho Computacional — Matemática 4
 
 **Aluna:** Marjory Gonçalves Cardoso  
-**Disciplina:** Matemática 4  
-**Período:** 1º Bimestre de 2025  
+**Disciplina:** Matemática 4   
 **Ferramenta utilizada:** Manim Community Edition (Python)
 
 ---
