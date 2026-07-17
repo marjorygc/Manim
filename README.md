@@ -1,68 +1,201 @@
-# Trabalho Computacional — Matemática 4
+# 📐 Trabalho Computacional — Matemática 4
 
 **Aluna:** Marjory Gonçalves Cardoso  
-**Matéria:** Matemática 4 · 1º Bimestre · 2025  
-**Ferramenta:** [Manim](https://www.manim.community/) — biblioteca de animação matemática para Python
+**Disciplina:** Matemática 4  
+**Período:** 1º Bimestre de 2025  
+**Ferramenta utilizada:** Manim Community Edition (Python)
 
 ---
 
-## Conteúdo
+# 📖 Sobre o projeto
 
-**(i) Dedução da Fórmula de Heron**  
-Animação completa da dedução partindo do Teorema de Pitágoras, passando pelas fórmulas intermediárias I a V, fatoração por diferença de quadrados e introdução do semiperímetro.
+Este repositório reúne os trabalhos computacionais desenvolvidos para a disciplina de Matemática 4 utilizando a biblioteca **Manim**, responsável pela criação de animações matemáticas em Python.
 
-**(ii) Exercício 37 — Pág. 457**  
-Livro *360° Matemática Fundamental: Uma Nova Abordagem — Parte II*.  
-Cálculo da área do losango verde da bandeira, área do círculo amarelo com π ≈ 22/7 e porcentagem de verde em relação ao retângulo total.
+As duas entregas foram mantidas no mesmo repositório para aproveitar toda a estrutura já configurada na primeira entrega, incluindo ambiente virtual, dependências e organização do projeto.
 
 ---
 
-## Como executar
+# 📂 Conteúdo do repositório
 
-**Requisitos:** Python 3.12 · Manim instalado
+## ✅ Primeira entrega
+
+### (i) Dedução da Fórmula de Heron
+
+Animação completa da dedução da Fórmula de Heron partindo do Teorema de Pitágoras, passando pelas fórmulas intermediárias, fatoração por diferença de quadrados e introdução do semiperímetro.
+
+### (ii) Exercício 37 — Página 457
+
+Livro **360º Matemática Fundamental – Parte II**
+
+Resolução utilizando animação para calcular:
+
+- área do losango verde da bandeira;
+- área do círculo amarelo utilizando π ≈ 22/7;
+- porcentagem da área verde em relação à área total da bandeira.
+
+---
+
+## ✅ Segunda entrega
+
+### (i) Dedução da fórmula do volume do tronco de pirâmide
+
+Animação mostrando toda a dedução da fórmula do volume do tronco de pirâmide utilizando:
+
+- conceito de seção transversal;
+- definição do tronco de pirâmide;
+- semelhança entre pirâmides;
+- razão entre áreas e volumes;
+- fórmulas intermediárias;
+- fatoração por diferença de cubos;
+- obtenção da fórmula final;
+- exemplo de aplicação.
+
+---
+
+### (ii) Exercício 10 — Página 169
+
+Livro **360º Matemática Fundamental**
+
+Resolução do problema envolvendo um recipiente cônico contendo água e óleo.
+
+A animação apresenta:
+
+- interpretação física do problema;
+- utilização da semelhança entre triângulos;
+- cálculo do volume da água;
+- cálculo do volume do óleo;
+- montagem da equação;
+- obtenção da resposta final.
+
+---
+
+# 📁 Organização do projeto
+
+```
+📦 Projeto
+│
+├── heron.py
+├── tronco_piramide.py
+├── cone_espcex.py
+├── media/
+├── .venv/
+└── README.md
+```
+
+### Arquivos principais
+
+| Arquivo | Descrição |
+|----------|-----------|
+| `heron.py` | Dedução da Fórmula de Heron e Exercício 37 |
+| `tronco_piramide.py` | Dedução da fórmula do volume do tronco de pirâmide |
+| `cone_espcex.py` | Resolução do Exercício 10 |
+| `README.md` | Documentação do projeto |
+
+---
+
+# ▶️ Como executar
+
+## Requisitos
+
+- Python 3.12
+- Manim Community Edition
+
+---
+
+## Criar o ambiente virtual
 
 ```bash
-# 1. Criar e ativar ambiente virtual
 python -m venv .venv
+```
+
+### Ativar o ambiente
+
+Windows
+
+```bash
 .venv\Scripts\activate
+```
 
-# 2. Instalar o Manim
+---
+
+## Instalar o Manim
+
+```bash
 pip install manim
+```
 
-# 3. Rodar a animação (qualidade baixa — teste rápido)
+---
+
+# Executando as animações
+
+## Primeira entrega — Fórmula de Heron
+
+Teste rápido
+
+```bash
 py -3.12 -m manim -pql heron.py FormulaHeron
+```
 
-# 4. Rodar em qualidade média (entrega)
+Maior qualidade
+
+```bash
 py -3.12 -m manim -pqm heron.py FormulaHeron
 ```
 
-O vídeo gerado será salvo em:
+---
+
+## Segunda entrega — Tronco de Pirâmide
+
+Teste rápido
+
+```bash
+py -3.12 -m manim -pql tronco_piramide.py VolumeTroncoPiramide
 ```
-media/videos/heron/480p15/FormulaHeron.mp4  ← qualidade baixa
-media/videos/heron/720p30/FormulaHeron.mp4  ← qualidade média
+
+Maior qualidade
+
+```bash
+py -3.12 -m manim -pqh tronco_piramide.py VolumeTroncoPiramide
 ```
 
 ---
 
-## Arquivos
+## Segunda entrega — Exercício do Cone
 
-| Arquivo | Descrição |
-|---|---|
-| `heron.py` | Código completo da animação |
-| `README.md` | Este arquivo |
+Teste rápido
+
+```bash
+py -3.12 -m manim -pql cone_espcex.py ExercicioCone
+```
+
+Maior qualidade
+
+```bash
+py -3.12 -m manim -pqh cone_espcex.py ExercicioCone
+```
 
 ---
 
-## Estrutura da animação
+# 📹 Arquivos gerados
 
-| Cena | Conteúdo |
-|---|---|
-| 0 | Tela de abertura |
-| 1 | Triângulo ABC com altura h |
-| 2 | Pitágoras — equações I e II |
-| 3 | Isolamento de x — fórmula III |
-| 4 | Cálculo de h² — fórmula IV |
-| 5 | Área ao quadrado — fórmula V |
-| 6 | Fatoração e semiperímetro p |
-| 7 | Fórmula de Heron |
-| 8 | Exercício 37 |
+As animações renderizadas são salvas automaticamente na pasta **media/videos**, organizada pelo próprio Manim.
+
+---
+
+# 🎯 Objetivo
+
+O objetivo dos trabalhos é utilizar recursos visuais para facilitar a compreensão de demonstrações matemáticas e da resolução de problemas, tornando o raciocínio mais intuitivo por meio de animações.
+
+---
+
+# 📝 Observações
+
+Durante a gravação dos vídeos de apresentação foram utilizadas versões das animações previamente renderizadas.
+
+Essa escolha foi feita porque o processo de renderização do Manim pode levar alguns minutos, dependendo da complexidade da animação e do desempenho do computador, o que tornaria a apresentação excessivamente longa.
+
+---
+
+# 📧 Contato
+
+Caso ocorra qualquer dificuldade para acessar os arquivos ou executar o projeto, fico à disposição para prestar esclarecimentos.
